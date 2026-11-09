@@ -116,11 +116,11 @@ p{font-size:calc(var(--u)*1.9)}
     <div class="ch"><b>🟢 AskHR</b>ส่งคำขอ HR ติดตามสถานะ ติดต่อ HR ได้อย่างปลอดภัย</div>
     <div class="ch"><b>🔷 Workday</b>จัดการข้อมูลส่วนบุคคล อัปเดตข้อมูลองค์กร</div>
   </div>
-  <p style="font-weight:600;margin-top:calc(var(--u)*1.8)">⚡ 15 ข้อ ข้อละสูงสุด <b class="t">900</b> คะแนน ยิ่งตอบช้าคะแนนยิ่งลด · คะแนนรวมสูงสุดรับรางวัล 🎁</p><div class="row2"><button class="btn pulse" id="start">แตะเพื่อเริ่มเล่น</button><button class="btn sec" id="seeb">🏆 ดูอันดับ</button></div>
+  <p style="font-weight:600;margin-top:calc(var(--u)*1.8)">⚡ สุ่ม 10 ข้อ ข้อละสูงสุด <b class="t">900</b> คะแนน ยิ่งตอบช้าคะแนนยิ่งลด · คะแนนรวมสูงสุดรับรางวัล 🎁</p><div class="row2"><button class="btn pulse" id="start">แตะเพื่อเริ่มเล่น</button><button class="btn sec" id="seeb">🏆 ดูอันดับ</button></div>
 </section>
 
 <section class="screen" id="play">
-  <div class="top"><span class="pill" id="sc">⭐ 0</span><div class="bar"><i id="tb"></i></div><span class="pill" id="tm">10</span><span class="pill" id="cb">ข้อ 1/15</span><span class="pill" id="lp">⚡ 900</span></div>
+  <div class="top"><span class="pill" id="sc">⭐ 0</span><div class="bar"><i id="tb"></i></div><span class="pill" id="tm">10</span><span class="pill" id="cb">ข้อ 1/10</span><span class="pill" id="lp">⚡ 900</span></div>
   <div class="q"><small>เลือกคำตอบที่ถูกต้อง</small><span id="qt"></span></div>
   <div class="opts" id="opts"></div>
   <div class="fb" id="fb">เลือกคำตอบได้เลย 👆</div>
@@ -129,14 +129,14 @@ p{font-size:calc(var(--u)*1.9)}
 <section class="screen" id="name">
   <h2 style="margin:0;font-size:calc(var(--u)*3.6)">จบเกม! 🎉</h2>
   <div class="score" id="ns">0</div>
-  <p style="margin:calc(var(--u)*.4) 0 calc(var(--u)*1.6)">จากคะแนนเต็ม 13,500 · ใส่ชื่อเพื่อติดอันดับ</p>
+  <p style="margin:calc(var(--u)*.4) 0 calc(var(--u)*1.6)">จากคะแนนเต็ม 9,000 · ใส่ชื่อเพื่อติดอันดับ</p>
   <input id="nm" maxlength="14" placeholder="ชื่อ / ชื่อเล่น" autocomplete="off" enterkeyhint="done">
   <div class="row2"><button class="btn" id="sv">บันทึกคะแนน</button><button class="btn sec sm" id="skip" style="align-self:flex-end">ข้าม</button></div>
 </section>
 
 <section class="screen" id="board">
   <h2 id="bt" style="margin:0;font-size:calc(var(--u)*3.6)">🏆 อันดับคะแนน</h2>
-  <p class="hint" style="margin:calc(var(--u)*.4) 0 calc(var(--u)*1.2);font-size:calc(var(--u)*1.9)">คะแนนสูงสุดรับรางวัล 🎁 · เต็ม 13,500 คะแนน</p>
+  <p class="hint" style="margin:calc(var(--u)*.4) 0 calc(var(--u)*1.2);font-size:calc(var(--u)*1.9)">คะแนนสูงสุดรับรางวัล 🎁 · เต็ม 9,000 คะแนน</p>
   <div id="lb"></div>
   <div class="row2"><button class="btn sm" id="again2">เล่นอีกครั้ง</button><button class="btn sec sm" id="info">ช่องทาง AskHR</button><button class="btn sec sm" id="home2">หน้าแรก</button></div>
   <p class="hint" id="idle2"></p>
@@ -183,7 +183,7 @@ var Q=[
  {t:"Logo ใดคือ Presto",o:[{i:IM.teams},{i:IM.presto},{i:IM.workday}],c:1,img:1,ans:"โลโก้ Presto (ดาวประกายสีขาวบนพื้นสีฟ้า)"}
 ];
 var $=function(i){return document.getElementById(i)};
-var N=15,TQ=10,K="presto_lb_v1",score,qi,t0,tm,lock,order,cur,idleI,mine,mem=[];
+var N=10,TQ=10,K="presto_lb_v1",score,qi,t0,tm,lock,order,cur,idleI,mine,mem=[];
 try{mem=JSON.parse(localStorage.getItem(K))||[]}catch(e){mem=[]}
 function lbSave(){try{localStorage.setItem(K,JSON.stringify(mem))}catch(e){}}
 function show(id){clearInterval(idleI);["home","play","name","board","end"].forEach(function(s){$(s).classList.toggle("on",s===id)})}
